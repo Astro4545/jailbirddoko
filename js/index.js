@@ -1,4 +1,3 @@
-function formatElapsedTime() 
 {function startCounting() {
     let randomSeconds = Math.floor(Math.random() * (60 - 10 + 1)) + 10; // Random number between 10 and 60
     let counter = 0;
