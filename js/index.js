@@ -1,22 +1,14 @@
-{function startCounting() {
-    let randomSeconds = Math.floor(Math.random() * (60 - 10 + 1)) + 10; // Random number between 10 and 60
-    let counter = 0;
-
-    console.log(`Counting up to ${randomSeconds} seconds...`);
-
-    let interval = setInterval(() => {
-        counter++;
-        console.log(counter);
-
-        if (counter >= randomSeconds) {
-            clearInterval(interval);
-            console.log("Restarting...");
-            startCounting(); // Restart the cycle
-        }
-    }, 1000); // Count every second
-}
-
-startCounting();
+function formatElapsedTime() 
+{
+   const currentTime = new Date();
+   const lastStreamEndTime = new Date("2025-04-25T02:50:30Z");
+   // in milliseconds
+   const timeSinceStream = currentTime.getTime() - lastStreamEndTime.getTime();
+   
+   const secondsPart = Math.floor((timeSinceStream % (1000 * 60)) / 1000);
+   const minutesPart = Math.floor((timeSinceStream % (1000 * 60 * 60)) / (1000 * 60));
+   const hoursPart = Math.floor((timeSinceStream % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   const daysPart = Math.floor(timeSinceStream / (1000 * 60 * 60 * 24));
   
   return `${daysPart} days, ${hoursPart} hours, ${minutesPart} minutes, and ${secondsPart} seconds without the Jailbirds`;
 }
