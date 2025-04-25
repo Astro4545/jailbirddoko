@@ -1,7 +1,7 @@
 function formatElapsedTime() 
 {
   const currentTime = new Date();
-  const lastStreamEndTime = new Date("2025-04-13T05:54:30Z");
+  const lastStreamEndTime = new Date("2025-04-25T02:50:30Z");
   // in milliseconds
   const timeSinceStream = currentTime.getTime() - lastStreamEndTime.getTime();
   
@@ -11,7 +11,7 @@ function formatElapsedTime()
   const daysPart = Math.floor(timeSinceStream / (1000 * 60 * 60 * 24));
 
   
-  return `${daysPart} days, ${hoursPart} hours, ${minutesPart} minutes, and ${secondsPart} seconds without Nerissa`;
+  return `${daysPart} days, ${hoursPart} hours, ${minutesPart} minutes, and ${secondsPart} seconds without the Jailbirds`;
 }
 
 function updateTimeSinceNerissaElement() 
